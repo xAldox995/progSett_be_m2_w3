@@ -28,7 +28,7 @@ public class JWT {
             Jwts.parser()
                     .verifyWith(Keys.hmacShaKeyFor(secret.getBytes()))
                     .build().parse(accessToken);
-        } catch (Exception es) {
+        } catch (Exception ex) {
             throw new UnauthorizedException("Problema col token! Rieffetuare il login");
         }
 
