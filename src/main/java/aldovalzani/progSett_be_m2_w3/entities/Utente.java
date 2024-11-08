@@ -26,7 +26,7 @@ public class Utente {
     private String cognome;
     private String email;
     private String password;
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     private Ruolo ruolo;
 
     public Utente(String cognome, String email, String nome, String password) {

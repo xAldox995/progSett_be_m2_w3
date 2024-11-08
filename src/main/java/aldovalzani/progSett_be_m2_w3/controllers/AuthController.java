@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.stream.Collectors;
 //    http://localhost:3001/auth
 
-@RestControllerAdvice
+@RestController
 @RequestMapping("/auth")
 public class AuthController {
     @Autowired
