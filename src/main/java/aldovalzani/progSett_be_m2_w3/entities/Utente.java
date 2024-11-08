@@ -1,10 +1,7 @@
 package aldovalzani.progSett_be_m2_w3.entities;
 
 import aldovalzani.progSett_be_m2_w3.entities.enums.Ruolo;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,12 +26,12 @@ public class Utente {
     private String cognome;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
     private Ruolo ruolo;
 
-    public Utente(String cognome, String email, long id, String nome, String password) {
+    public Utente(String cognome, String email, String nome, String password) {
         this.cognome = cognome;
         this.email = email;
-        this.id = id;
         this.nome = nome;
         this.password = password;
         this.ruolo = Ruolo.CLIENTE;
